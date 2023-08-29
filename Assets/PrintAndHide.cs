@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConsolePrint : MonoBehaviour
+public class PrintAndHide : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -16,6 +16,6 @@ public class ConsolePrint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log($"GameObject's name:{gameObject.name}:{++i}");
+        Debug.Log($"{gameObject.name}:{++i}");
     }
 }
