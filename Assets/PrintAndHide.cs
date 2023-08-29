@@ -8,12 +8,13 @@ public class PrintAndHide : MonoBehaviour
 
     private int i = 3;
     public Renderer rend;
+    private int randomNum = -1;
     void Start()
     {
         rend = GetComponent<Renderer>();
 
         if (tag == "Blue"){
-            i = Random.Range(150,251);
+            randomNum = Random.Range(150,251);
         }
     }
 
@@ -24,7 +25,7 @@ public class PrintAndHide : MonoBehaviour
         if(tag == "Red" && i == 100){
             gameObject.SetActive(false);
         }
-        if(tag == "Blue" && i == 250){
+        if(tag == "Blue" && i == randomNum){
             rend.enabled = false;
         }
     }
