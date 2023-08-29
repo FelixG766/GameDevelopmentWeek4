@@ -10,12 +10,22 @@ public class PrintAndHide : MonoBehaviour
     public Renderer rend;
     void Start()
     {
-        
+        rend = GetComponent<Renderer>();
+
+        if (tag == "Blue"){
+            i = Random.Range(150,251);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.Log($"{gameObject.name}:{++i}");
+        if(tag == "Red" && i == 100){
+            gameObject.SetActive(false);
+        }
+        if(tag == "Blue" && i == 250){
+            rend.enabled = false;
+        }
     }
 }
